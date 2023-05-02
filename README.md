@@ -16,15 +16,27 @@ It's clear that unsafe drinking water is a problem for global health. In this pr
 After reading in the data and importing the necessary libraries, this is what our data looks like. 
 
 
-![Image](Images/water_df.png)
+![Image](Images/water-df.png)
 
 
 The data consists of 3,276 water samples and contains 9 numeric values. 
 
     1. pH Value 
     2. Hardness
-    3. Solids (Total)
+    3. Solids
+    4. Chloramines
+    5. Sulfate
+    6. Conductivity
+    7. Organic_carbon
+    8. Trihalomethanes
+    9. Turbidity
+    10. Potability
 
+Potability value of 1 means potable (drinkable)and 0 not potable (undrinkable). 
+
+Let's check the breakdown of samples that are potable vs unpotable. 
+
+![Image](Images/potability-breakdown.png)
 
 ### Data: Source? 
 

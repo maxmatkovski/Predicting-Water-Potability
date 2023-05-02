@@ -43,6 +43,25 @@ Checking for a correlation between different variables.
 
 ![Image](Images/pairplot.png)
 
+There doesn't seem to be a clear correlation between any of the variables.
+
+### Preparing our Data
+
+Let's check for missing data. 
+
+![Image](Images/missing-values.png)
+
+All the variables are numerical so we don't need to convert any of the data; however, there is quite a bit of missing data so we need to deal with those values. 
+
+We will replace the missing values with the mean of each column. 
+'''
+df = df.apply(lambda x: x.fillna(x.mean()))
+'''
+
+### Dealing with the missing values
+
+
+
 ### Data: Source? 
 
 ### Works Cited

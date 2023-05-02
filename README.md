@@ -53,12 +53,18 @@ Let's check for missing data.
 
 All the variables are numerical so we don't need to convert any of the data; however, there is quite a bit of missing data so we need to deal with those values. 
 
-We will replace the missing values with the mean of each column. 
-'''
-df = df.apply(lambda x: x.fillna(x.mean()))
-'''
 
 ### Dealing with the missing values
+ 
+As we can see there are a good amount of missing values that we need to deal with. Each variable has different amounts of missing values so the values appear to be missing at random. Further, some of our variables appear to be missing signficant shares of their values (3276-2785/3276 ph) and (3276-2495/3276 Sulfate) so it isn't appropriate to simply delete the rows as we would lose a great amount of our training data. 
+
+Based off our high amount of missing values and the randomness of the values, mean imputation, median imputation, and most frequency imputation seem most appropriate. We can use each imputation method and later assess model accuracy on each set of data. 
+
+'''
+df_mean = df.apply(lambda x: x.fillna(x.mean()))
+df_median = df.apply(lambda x: x.fillna(x.median()))
+df_mode = df.apply(lambda x: x.fillna(x.mode()))
+'''
 
 
 

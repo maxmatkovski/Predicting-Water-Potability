@@ -60,13 +60,11 @@ As we can see there are a good amount of missing values that we need to deal wit
 
 Based off our high amount of missing values and the randomness of the values, mean imputation, median imputation, and most frequency imputation seem most appropriate. We can use each imputation method and later assess model accuracy on each set of data. 
 
-'''
+''
 df_mean = df.apply(lambda x: x.fillna(x.mean()))
 df_median = df.apply(lambda x: x.fillna(x.median()))
 df_mode = df.apply(lambda x: x.fillna(x.mode()))
-'''
-
-
+''
 
 ### Data: Source? 
 

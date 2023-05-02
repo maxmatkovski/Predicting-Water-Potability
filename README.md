@@ -103,6 +103,7 @@ print(classification_report(y_test,predictions))
 ![Image](Images/classification2.png)
 
 #### df_mode
+mode classification not working for some reason
 
 ### Data: Source? 
 

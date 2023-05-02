@@ -20,6 +20,7 @@ After reading in the data and importing the necessary libraries, this is what ou
 
 
 The data consists of 3,276 water samples and contains 9 numeric values. 
+
     1. pH Value 
     2. Hardness
     3. Solids (Total)

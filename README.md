@@ -66,6 +66,35 @@ df_median = df.apply(lambda x: x.fillna(x.median()))
 df_mode = df.apply(lambda x: x.fillna(x.mode()))
 ```
 
+My guess is that the median value will be most accurate because it better accounts for extreme values, and mode imputation tends to be better for categorical data.
+
+### Train Test Split
+
+```
+from sklearn.model_selection import train_test_split
+X = df_mean.drop('Potability',axis=1)
+y = df_mean['Potability']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=101)
+```
+
+
+### Decision Tree Model
+
+```
+from sklearn.tree import DecisionTreeClassifier
+dtree = DecisionTreeClassifier()
+dtree.fit(X_train,y_train)
+```
+
+### Predict and Evaluate Decision Tree
+
+```
+predictions = dtree.predict(X_test)
+from sklearn.metrics import classification_report,confusion_matrix
+print(classification_report(y_test,predictions))
+```
+
+
 ### Data: Source? 
 
 ### Works Cited

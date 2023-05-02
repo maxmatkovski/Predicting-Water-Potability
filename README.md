@@ -38,6 +38,11 @@ Let's check the breakdown of samples that are potable vs unpotable.
 
 ![Image](Images/potability-breakdown.png)
 
+
+Checking for a correlation between different variables. 
+
+![Image](Images/pairplot.png)
+
 ### Data: Source? 
 
 ### Works Cited

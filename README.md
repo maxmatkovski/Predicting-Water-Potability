@@ -94,7 +94,7 @@ from sklearn.metrics import classification_report,confusion_matrix
 print(classification_report(y_test,predictions))
 ```
 
-#### Interpreting Classification Report
+### Interpreting Classification Report
 ![Image](Images/classification1.png)
 
 

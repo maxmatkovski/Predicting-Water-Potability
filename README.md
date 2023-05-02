@@ -16,7 +16,7 @@ It's clear that unsafe drinking water is a problem for global health. In this pr
 After reading in the data and importing the necessary libraries, this is what our data looks like. 
 
 
-![Image](images/water_df.png)
+![Image](Images/water_df.png)
 
 
 The data consists of 3,276 water samples and contains 9 numeric values. 

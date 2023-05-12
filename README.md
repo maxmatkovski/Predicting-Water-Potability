@@ -98,7 +98,7 @@ Here we are splitting the data into a "training" set, data which we will train o
 
 Decision trees can be used for both regression and classification tasks. 
 
-![Image](Images/decision-tree.png.png)
+![Image](Images/decision-tree.png)
 
 
 ### Decision Tree Model Implementation

@@ -96,7 +96,26 @@ Here we are splitting the data into a "training" set, data which we will train o
 
 ### Decision Tree Model Theory
 
-Decision trees can be used for both regression and classification tasks. 
+Decision trees can be used for both regression and classification tasks and is a form of supervised learning because it requires the data to be labeled in order to create a mode. In the case of classfication, the logical statement at each step of the decision tree is decided on which condition will maximize information gain (such as entropy or gini impurity?). This process continues recursively until all data is classified into its respective class. 
+
+In the case of regression, we are attempting to predict a numeric value rather than classify data. Here the algorithm selects which feature will optimize variance reduction such as mean squared reduction or mean absolute error (essentially a loss function). (?) (Optimizes for loss fucntion rather than information gain?). 
+
+**Problems with decision trees**
+Decision trees are prone to overfitting. Overfitting is when a machine learning model learns from a set of training data "too well" and consequently is unable to replicate well on unseen data. Essentially, the model becomes so accurate on the training data that it is highly biased when assessing new data. Decision trees are especially prone to overfitting when there are many features in our data or if the tree grows too deep. The deeper the tree grows, the more likely overfitting will occur. Other problems that can lead to overfitting in decision trees arise from the size and distribution of our data. Overfitting can occur when our data is too small or when it's unbalanced. 
+
+Techniques to avoid overfitting 
+- pruning
+- maximum tree depth
+- random forests
+
+**Random Forest Model**
+In order to address the common problem of overfitting that is common with decision trees we can use a machine learning method known as random forests. 
+
+A random forest model essentially works by creating a series of different decision trees and taking the majority decision of the trees. The process of implementing a random forest is as follows.
+1. Randomly sleect a subset of the training data (with replacement) to create a bootstrapped sample. 
+- In this case, "with replacement" refers to the fact that data can be resampled in multiple constructed decision trees. For example, if you have a sample of 200 data points and select a subset of 100 data points for each tree with replacement, each data point has a chance of being selected more than once. Further, it is possible that some data points will be selected multiple times while others not at all. The creation
+
+*Interesting that the term bootstrapping refers to "pull oneself up by the bootstraps" or use one's resources in order to achieve a goal. In statistics the term bootstrapping is used to refer to the idea of using the data itself to estimate its properties without assuming the underlying distribution.*
 
 ![Image](Images/decision-tree.png)
 

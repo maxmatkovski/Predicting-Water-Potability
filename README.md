@@ -68,6 +68,18 @@ df_mode = df.apply(lambda x: x.fillna(x.mode()))
 
 My guess is that the median value will be most accurate because it better accounts for extreme values, and mode imputation tends to be better for categorical data.
 
+#### Problem with Mode Imputation
+After replacing all the NaN values with the respective Mean and Median of the feature the data contained no missing values as is seen below. 
+![Image](Images/mean-imputation.png)
+
+However, I ran into a problem when attempting to replace all of the values with the mode (most frequent value). In many cases, there can be multiple "most frequent values", and thus there are several instances in which the mode method returns a series and not a singular value. Thus, there are still many NaN values. To avoid simply dropping these values we will not be using mode imputation and instead only rely on median and mean imputation.
+
+![Image](Images/mode-imputation.png)
+
+In the future, we can also experiment with more advanced types of imputation methods such as K Nearest Neighbors Imputation or Regression Imputation. 
+
+## Implementing and Evaluating Machine Learning Models
+
 ### Train Test Split
 
 ```

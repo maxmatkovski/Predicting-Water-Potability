@@ -104,6 +104,7 @@ print(classification_report(y_test,predictions))
 
 #### df_mode
 mode classification not working for some reason
+- multiple mode values and the .mode() method returns a pandas series. Thus, in this case we are left with multiple values that remain as NaN. Because of this we will only compare median and mean imputation for now. In the future, we can try imputing the values with more advanced methods such as K Nearest Neighbors imputation or Regression imputation. 
 
 ### Data: Source? 
 
@@ -111,4 +112,3 @@ mode classification not working for some reason
 1. https://ourworldindata.org/water-access
 
 
-Goodnight

@@ -66,17 +66,20 @@ df_median = df.apply(lambda x: x.fillna(x.median()))
 df_mode = df.apply(lambda x: x.fillna(x.mode()))
 ```
 
-My guess is that the median value will be most accurate because it better accounts for extreme values, and mode imputation tends to be better for categorical data.
-
-#### Problem with Mode Imputation
 After replacing all the NaN values with the respective Mean and Median of the feature the data contained no missing values as is seen below. 
 ![Image](Images/mean-imputation.png)
 
-However, I ran into a problem when attempting to replace all of the values with the mode (most frequent value). In many cases, there can be multiple "most frequent values", and thus there are several instances in which the mode method returns a series and not a singular value. Thus, there are still many NaN values. To avoid simply dropping these values we will not be using mode imputation and instead only rely on median and mean imputation.
+My guess is that the median value will be most accurate because it better accounts for extreme values, and mode imputation tends to be better for categorical data.
+
+### Problem with Mode Imputation
+
+
+
+ I ran into a problem when attempting to replace all of the values with the mode (most frequent value). In many cases, there can be multiple "most frequent values", and thus there are several instances in which the mode method returns a series and not a singular value. Thus, there are still many NaN values. To avoid simply dropping these values we will not be using mode imputation and instead only rely on median and mean imputation.
 
 ![Image](Images/mode-imputation.png)
 
-In the future, we can also experiment with more advanced types of imputation methods such as K Nearest Neighbors Imputation or Regression Imputation. 
+In the future, we can also experiment with more advanced types of imputation methods such as **K Nearest Neighbors Imputation** or **Regression Imputation**. 
 
 ## Implementing and Evaluating Machine Learning Models
 
@@ -89,16 +92,23 @@ y = df_mean['Potability']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=101)
 ```
 
+Here we are splitting the data into a "training" set, data which we will train our machine learning algorithm on, and a "testing" set, data which we will hold back in order to see the how accurate our model performed. 
 
-### Decision Tree Model
+### Decision Tree Model Theory
 
+Decision trees can be used for both regression and classification tasks. 
+
+![Image](Images/decision-tree.png.png)
+
+
+### Decision Tree Model Implementation
 ```
 from sklearn.tree import DecisionTreeClassifier
 dtree = DecisionTreeClassifier()
 dtree.fit(X_train,y_train)
 ```
 
-### Predict and Evaluate Decision Tree
+#### Predict and Evaluate Decision Tree
 
 ```
 predictions = dtree.predict(X_test)
@@ -106,17 +116,15 @@ from sklearn.metrics import classification_report,confusion_matrix
 print(classification_report(y_test,predictions))
 ```
 
-### Interpreting Classification Reports
+#### Interpreting Classification Reports
 
-#### df_mean
+##### df_mean
 ![Image](Images/classification1.png)
 
-#### df_median
+##### df_median
 ![Image](Images/classification2.png)
 
-#### df_mode
-mode classification not working for some reason
-- multiple mode values and the .mode() method returns a pandas series. Thus, in this case we are left with multiple values that remain as NaN. Because of this we will only compare median and mean imputation for now. In the future, we can try imputing the values with more advanced methods such as K Nearest Neighbors imputation or Regression imputation. 
+
 
 ### Data: Source? 
 

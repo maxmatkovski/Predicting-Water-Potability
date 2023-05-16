@@ -166,6 +166,22 @@ Precision: Precision measures what percent of predicted true values of a particu
 
 Recall: (True Postitive Rate) 
 
+
+
+**Recall** also known as the sensitivity or true positive rate, calculates the percentage of true positive instances which are correctly by the model. In the case of Random Forest (median imputation), the model correctly identified 89% of actual instances belonging to class 0, while only recalling 34% of of actual instances of class 1. *(Why such a large disparity)*
+
+**F-1 Score:** F-1-score is the harmonic mean of precision and recall metrics. Harmonic means are useful for addressing imbalance and give more value to smaller values, thus reducing the impact of outliers. In this case we want to balance precision and recall, and thus, use the harmonic mean. 
+
+**Support:** Support metric is simply the number of instances we have in our data set of each class. 
+
+**Accuracy:** Accuracy calculates the model's predictions regardless of the class. Thus, an accuracy value of 0.68 means that 68% of all instances of all instances were correctly classified. 
+
+**Macro Avg:** Macro Avg calculates the average precision, recall and F-1 score across classes. 
+
+**Weighted Avg:** Weighted Avg calculates the weighted average of precision, recall and F-1 considering the support (number of instances of each class). 
+
+
+
               precision    recall  f1-score   support
 
            0       0.69      0.90      0.78       603
@@ -197,18 +213,6 @@ Class 1: 137/380 = 0.36
 Correctly predicted 1's / Total 1's
 
 
-
-**Recall** also known as the sensitivity or true positive rate, calculates the percentage of true positive instances which are correctly by the model. In the case of Random Forest (median imputation), the model correctly identified 89% of actual instances belonging to class 0, while only recalling 34% of of actual instances of class 1. *(Why such a large disparity)*
-
-**F-1 Score:** F-1-score is the harmonic mean of precision and recall metrics. Harmonic means are useful for addressing imbalance and give more value to smaller values, thus reducing the impact of outliers. In this case we want to balance precision and recall, and thus, use the harmonic mean. 
-
-**Support:** Support metric is simply the number of instances we have in our data set of each class. 
-
-**Accuracy:** Accuracy calculates the model's predictions regardless of the class. Thus, an accuracy value of 0.68 means that 68% of all instances of all instances were correctly classified. 
-
-**Macro Avg:** Macro Avg calculates the average precision, recall and F-1 score across classes. 
-
-**Weighted Avg:** Weighted Avg calculates the weighted average of precision, recall and F-1 considering the support (number of instances of each class). 
 
 ### Data: Source? 
 

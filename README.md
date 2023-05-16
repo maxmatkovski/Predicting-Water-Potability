@@ -188,8 +188,8 @@ Recall: (True Postitive Rate)
            1       0.69      0.36      0.47       380
 
     accuracy                           0.69       983
-    macro avg       0.69      0.63      0.63       983
-    weighted avg       0.69      0.69      0.66       983
+    macro avg      0.69      0.63      0.63       983
+    weighted avg   0.69      0.69      0.66       983
 
 print(confusion_matrix(y_test,predictions))
 

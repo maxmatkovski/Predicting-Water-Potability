@@ -194,6 +194,7 @@ Actual 0's / Total Predicted 0's
 
 Class 1: 137 / (137 + 69) = 
 Actual 1's / Total Predicted 1's
+*precision refers to how accuraate the models predictions were*
 
 **Recall**
 
@@ -202,7 +203,10 @@ Correctly predicted 0's / Total 0's
 
 Class 1: 137/380 = 0.36
 Correctly predicted 1's / Total 1's
+*recall refers to what percent of the values were correctly predicted*
 
+**F-1 Score (Harmonic Mean)**
+?
 
 
 

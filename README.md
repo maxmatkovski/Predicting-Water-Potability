@@ -180,17 +180,6 @@ Recall: (True Postitive Rate)
 
 **Weighted Avg:** Weighted Avg calculates the weighted average of precision, recall and F-1 considering the support (number of instances of each class). 
 
-
-
-              precision    recall  f1-score   support
-
-           0       0.69      0.90      0.78       603
-           1       0.69      0.36      0.47       380
-
-    accuracy                           0.69       983
-    macro avg      0.69      0.63      0.63       983
-    weighted avg   0.69      0.69      0.66       983
-
 ```
 print(confusion_matrix(y_test,predictions))
 
@@ -215,6 +204,16 @@ Class 1: 137/380 = 0.36
 Correctly predicted 1's / Total 1's
 
 
+
+
+              precision    recall  f1-score   support
+
+           0       0.69      0.90      0.78       603
+           1       0.69      0.36      0.47       380
+
+    accuracy                           0.69       983
+    macro avg      0.69      0.63      0.63       983
+    weighted avg   0.69      0.69      0.66       983
 
 ### Data: Source? 
 

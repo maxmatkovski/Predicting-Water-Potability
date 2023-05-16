@@ -164,17 +164,51 @@ print(classification_report(y_test,predictions))
 
 Precision: Precision measures what percent of predicted true values of a particular class are indeed true. In this case for class 0, the precision is 0.68 which means that 68% of the instances the model predicted to be as class 0 (water not potable) are indeed class class 0 instances. 
 
-Recall: Recall also known as the sensitivity or true positive rate, calculates the percentage of true positive instances which are correctly by the model. In the case of Random Forest (median imputation), the model correctly identified 89% of actual instances belonging to class 0, while only recalling 34% of of actual instances of class 1. *(Why such a large disparity)*
+Recall: (True Postitive Rate) 
 
-F-1 Score: F-1-score is the harmonic mean of precision and recall metrics. Harmonic means are useful for addressing imbalance and give more value to smaller values, thus reducing the impact of outliers. In this case we want to balance precision and recall, and thus, use the harmonic mean. 
+              precision    recall  f1-score   support
 
-Support: Support metric is simply the number of instances we have in our data set of each class. 
+           0       0.69      0.90      0.78       603
+           1       0.69      0.36      0.47       380
 
-Accuracy: Accuracy calculates the model's predictions regardless of the class. Thus, an accuracy value of 0.68 means that 68% of all instances of all instances were correctly classified. 
+    accuracy                           0.69       983
+   macro avg       0.69      0.63      0.63       983
+weighted avg       0.69      0.69      0.66       983
 
-Macro Avg: Macro Avg calculates the average precision, recall and F-1 score across classes. 
+print(confusion_matrix(y_test,predictions))
 
-Weighted Avg: Weighted Avg calculates the weighted average of precision, recall and F-1 considering the support (number of instances of each class). 
+[[542  61]
+ [243 137]]
+
+**Precision**
+
+Class 0: 542 / (542 + 243) = 0.69
+Actual 0's / Total Predicted 0's
+
+Class 1: 137 / (137 + 69) = 
+Actual 1's / Total Predicted 1's
+
+**Recall**
+
+Class 0: 542 / 603 = 0.90
+Correctly predicted 0's / Total 0's
+
+Class 1: 137/380 = 0.36
+Correctly predicted 1's / Total 1's
+
+
+
+**Recall** also known as the sensitivity or true positive rate, calculates the percentage of true positive instances which are correctly by the model. In the case of Random Forest (median imputation), the model correctly identified 89% of actual instances belonging to class 0, while only recalling 34% of of actual instances of class 1. *(Why such a large disparity)*
+
+**F-1 Score:** F-1-score is the harmonic mean of precision and recall metrics. Harmonic means are useful for addressing imbalance and give more value to smaller values, thus reducing the impact of outliers. In this case we want to balance precision and recall, and thus, use the harmonic mean. 
+
+**Support:** Support metric is simply the number of instances we have in our data set of each class. 
+
+**Accuracy:** Accuracy calculates the model's predictions regardless of the class. Thus, an accuracy value of 0.68 means that 68% of all instances of all instances were correctly classified. 
+
+**Macro Avg:** Macro Avg calculates the average precision, recall and F-1 score across classes. 
+
+**Weighted Avg:** Weighted Avg calculates the weighted average of precision, recall and F-1 considering the support (number of instances of each class). 
 
 ### Data: Source? 
 

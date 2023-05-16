@@ -191,10 +191,12 @@ Recall: (True Postitive Rate)
     macro avg      0.69      0.63      0.63       983
     weighted avg   0.69      0.69      0.66       983
 
+```
 print(confusion_matrix(y_test,predictions))
 
 [[542  61]
  [243 137]]
+ ```
 
 **Precision**
 

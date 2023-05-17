@@ -2,16 +2,17 @@
 
 ## Project Motivation
 
-According to the *Global Burden of Disease* study 1.2 million people died prematurely as a result unsafe drinking water. This number is more than three times the amount of homicides globally and equivalent to the total amount of road deaths (1). More specifically, countries which are poorest are most vulnerable to illness from unsafe drinking water. 
+According to the *Global Burden of Disease* study 1.2 million people died prematurely as a result of unsafe drinking water. This number is more than three times the amount of homicides globally and equivalent to the total amount of road deaths (1). 
 
 ![Image](Images/death-tolls.png)
 
-It's clear that unsafe drinking water is a problem for global health. In this project, I will be exploring the inequalities of countries when it comes to water inaccesibility and also using Random Forests and Decicion Trees to predict Water Potability. 
+It's clear that unsafe drinking water is a problem for global health. In this project, I will be using Decision Trees and Random Forests to classify water as either potable or unpotable. 
 
 
 ## Predicting Water Potability with Decision Trees and Random Forests
 
-**Where was data from**?
+This data set was found on Kaggle.
+https://www.kaggle.com/datasets/adityakadiwal/water-potability
 
 After reading in the data and importing the necessary libraries, this is what our data looks like. 
 
@@ -32,7 +33,17 @@ The data consists of 3,276 water samples and contains 9 numeric values.
     9. Turbidity
     10. Potability
 
-Potability value of 1 means potable (drinkable)and 0 not potable (undrinkable). 
+**What are the features?**
+1. **PH Value** represents the acid-base balance of the water. WHO recommends a permissible PH range of 6.5 to 8.5. All data points in this data set are between 6.52 and 6.83 which are all within the range of the WHO. 
+
+2. **Hardness** is caused by calcium and magnesium deposits seeping into water from geologic deposits. 
+
+3. **Solids** represents the total dissolved solids found in the water which can include disolved organic materials and inorganic materials.
+
+4. **Chloramines** represents total chlorine levels found in water. 
+
+
+**Potability value of 1 means potable (drinkable)and 0 not potable (undrinkable).**
 
 Let's check the breakdown of samples that are potable vs unpotable. 
 

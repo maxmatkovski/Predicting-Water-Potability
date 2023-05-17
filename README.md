@@ -40,10 +40,19 @@ The data consists of 3,276 water samples and contains 9 numeric values.
 
 3. **Solids** represents the total dissolved solids found in the water which can include disolved organic materials and inorganic materials.
 
-4. **Chloramines** represents total chlorine levels found in water. 
+4. **Chloramines** represents total chlorine levels found in water.
 
+5. **Sulfate** are naturally ocurring substances found in minerals, soil and rocks. Sulfate concentration in freshwater is about 3 to 30 mg/L in freshwater supplies, yet in saltwater supplies the range is about 2,700 mg/L. 
 
-**Potability value of 1 means potable (drinkable)and 0 not potable (undrinkable).**
+6. **Conductivity** measures the ionic process of a solution that it enables it to transmit current. According to WHO standards, EC value should not exceeded 400 μS/cm.
+
+7. **Organic_carbon** is a measure of the total amount of carbon in organic compounds in pure water. According to US EPA < 2 mg/L as TOC in treated / drinking water, and < 4 mg/Lit in source water which is use for treatment.
+
+8. **Trihalomethanes** are chemicals which may be found in water treated with chlorine. The concentration of THMs in drinking water varies according to the level of organic material in the water, the amount of chlorine required to treat the water, and the temperature of the water that is being treated. THM levels up to 80 ppm is considered safe in drinking water.
+
+9. **Turbidity** is a measure of light emitting properties of water and the test is used to indicate the quality of waste discharge with respect to colloidal matter. The mean turbidity value obtained for Wondo Genet Campus (0.98 NTU) is lower than the WHO recommended value of 5.00 NTU.
+
+10. **Potability** value of 1 indicates Potable (safe for human consumption) and 0 indicates not potable (not safe for human consumption).
 
 Let's check the breakdown of samples that are potable vs unpotable. 
 

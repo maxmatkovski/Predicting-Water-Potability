@@ -40,7 +40,7 @@ The data consists of 3,276 water samples and contains 9 numeric values.
 
 3. **Solids** represents the total dissolved solids found in the water which can include disolved organic materials and inorganic materials.
 
-4. **Chloramines** represents total chlorine levels found in water.
+4. **Chloramines** represents total chlorine levels found in water. Chlorine and chloramine are the major disinfectants used in public water systems. Chloramines are most commonly formed when ammonia is added to chlorine to treat drinking water. Chlorine levels up to 4 milligrams per liter (mg/L or 4 parts per million (ppm)) are considered safe in drinking water.
 
 5. **Sulfate** are naturally ocurring substances found in minerals, soil and rocks. Sulfate concentration in freshwater is about 3 to 30 mg/L in freshwater supplies, yet in saltwater supplies the range is about 2,700 mg/L. 
 
@@ -54,10 +54,49 @@ The data consists of 3,276 water samples and contains 9 numeric values.
 
 10. **Potability** value of 1 indicates Potable (safe for human consumption) and 0 indicates not potable (not safe for human consumption).
 
-Let's check the breakdown of samples that are potable vs unpotable. 
 
-![Image](Images/potability-breakdown.png)
+### Checking class balance in our data set
 
+![Image](Images/percent-bar-graph.png)
+
+In this case, our data set is slightly imbalanced with class 0 representing 61.0% of our population and class 1 representing 39.0% of our data. Because the data is not heavily imbalanced we will simply proceed for now, but later we can attempt to alter our data set in order to improve model performance. 
+
+#### Dealing with Class Imbalance
+1. **Oversampling.** The goal of this technique is to increase increase the represenation of the minority class by generating synthetic data. There are several methods by which we can generate synthetic data. 
+
+2. **Undersampling.** This process involves randomly getting rid of data points of the majority class until the two classes are balanced.
+
+3. **Class weighting.** This process involves assigning higher weights to the minority class during model training.
+
+4. **SMOTE (Synthetic Minority Over-sampling Technique)** This process generates synthetic data of the minority class by identifying minority data points and neighboring data points and creating synthetic points via some form of interpolation. 
+
+#### Creating a balanced data set
+
+```
+# create a balanced data set 
+
+import pandas as pd
+from sklearn.utils import resample
+
+# Assuming your original dataset is stored in a DataFrame called 'df'
+# Separate majority and minority classes
+majority_class = df[df['Potability'] == 0]  # Replace 'target' with the name of your target column
+minority_class = df[df['Potability'] == 1]
+
+
+# Undersample majority class
+undersampled_majority = resample(majority_class,
+                                 replace=False,  # Set to False to perform undersampling without replacement
+                                 n_samples=len(minority_class),  # Set the number of samples to match the minority class
+                                 random_state=42)  # Set a random state for reproducibility
+
+# Combine undersampled majority class with the minority class
+balanced_df = pd.concat([undersampled_majority, minority_class])
+
+# Shuffle the dataset to randomize the order
+balanced_df = balanced_df.sample(frac=1, random_state=42).reset_index(drop=True)
+
+```
 
 Checking for a correlation between different variables. 
 

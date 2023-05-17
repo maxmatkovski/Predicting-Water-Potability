@@ -98,6 +98,9 @@ balanced_df = balanced_df.sample(frac=1, random_state=42).reset_index(drop=True)
 
 ```
 
+![Image](Images/balanced-bar-graph.png)
+
+
 Checking for a correlation between different variables. 
 
 ![Image](Images/pairplot.png)

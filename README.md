@@ -59,9 +59,11 @@ The data consists of 3,276 water samples and contains 9 numeric values.
 
 ![Image](Images/percent-bar-graph.png)
 
-In this case, our data set is slightly imbalanced with class 0 representing 61.0% of our population and class 1 representing 39.0% of our data. Because the data is not heavily imbalanced we will simply proceed for now, but later we can attempt to alter our data set in order to improve model performance. 
+In this case, our data set is slightly imbalanced with class 0 representing 61.0% of our population and class 1 representing 39.0% of our data. This isn't an extreme class imbalance, but we will create a balanced data set in order to analyze which dataset yield better model performance. 
 
 #### Dealing with Class Imbalance
+There are several ways to deal with class imbalance. Below are four common methods. 
+
 1. **Oversampling.** The goal of this technique is to increase increase the represenation of the minority class by generating synthetic data. There are several methods by which we can generate synthetic data. 
 
 2. **Undersampling.** This process involves randomly getting rid of data points of the majority class until the two classes are balanced.

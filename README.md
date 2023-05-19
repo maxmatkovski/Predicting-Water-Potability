@@ -6,7 +6,7 @@ According to the *Global Burden of Disease* study 1.2 million people died premat
 
 ![Image](Images/death-tolls.png)
 
-It's clear that unsafe drinking water is a problem for global health. In this project, I will be using Decision Trees and Random Forests to classify water as either potable or unpotable. 
+It's clear that unsafe drinking water is a problem for global health. In this project, I will be using Decision Trees and Random Forests to classify water as either potable or unpotable. I will also be attempting to analyze which features are most important in predicting water potability. 
 
 
 ## Predicting Water Potability with Decision Trees and Random Forests

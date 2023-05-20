@@ -72,7 +72,9 @@ There are several ways to deal with class imbalance. Below are four common metho
 
 4. **SMOTE (Synthetic Minority Over-sampling Technique)** This process generates synthetic data of the minority class by identifying minority data points and neighboring data points and creating synthetic points via some form of interpolation. 
 
+
 ![Image](Images/smote.png)
+
 
 
 #### Creating a balanced data set
@@ -105,8 +107,9 @@ balanced_df = balanced_df.sample(frac=1, random_state=42).reset_index(drop=True)
 
 ![Image](Images/balanced-bar-graph.png)
 
+Our dataset is now balanced with a 50-50 representation of each type of class. However, due to our use of undersampling our data set now is **21.97% smaller** than it used to be. This may have an affect on our model performance which we will assess later. 
 
-Checking for a correlation between different variables. 
+#### Checking for a correlation between different variables. 
 
 ![Image](Images/pairplot.png)
 
@@ -285,6 +288,13 @@ Correctly predicted 1's / Total 1's
     accuracy                           0.69       983
     macro avg      0.69      0.63      0.63       983
     weighted avg   0.69      0.69      0.66       983
+
+
+### Feature Importances 
+
+![Image](Images/feature-importances.png)
+
+
 
 ### Data: Source? 
 

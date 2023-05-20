@@ -72,7 +72,7 @@ There are several ways to deal with class imbalance. Below are four common metho
 
 4. **SMOTE (Synthetic Minority Over-sampling Technique)** This process generates synthetic data of the minority class by identifying minority data points and neighboring data points and creating synthetic points via some form of interpolation. 
 
-![Image](Images/SMOTE.png)
+![Image](Images/smote.png)
 
 
 #### Creating a balanced data set

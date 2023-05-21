@@ -117,6 +117,50 @@ Our dataset is now balanced with a 50-50 representation of each type of class. H
 
 There doesn't seem to be a clear correlation between any of the variables.
 
+Also we will mathematically calculate the correlations of our values. 
+
+```
+correlation_matrix = df.corr()
+print(correlation_matrix)
+
+
+                       ph  Hardness    Solids  Chloramines   Sulfate  \
+ph               1.000000  0.082096 -0.089288    -0.034350  0.018203   
+Hardness         0.082096  1.000000 -0.046899    -0.030054 -0.106923   
+Solids          -0.089288 -0.046899  1.000000    -0.070148 -0.171804   
+Chloramines     -0.034350 -0.030054 -0.070148     1.000000  0.027244   
+Sulfate          0.018203 -0.106923 -0.171804     0.027244  1.000000   
+Conductivity     0.018614 -0.023915  0.013831    -0.020486 -0.016121   
+Organic_carbon   0.043503  0.003610  0.010242    -0.012653  0.030831   
+Trihalomethanes  0.003354 -0.013013 -0.009143     0.017084 -0.030274   
+Turbidity       -0.039057 -0.014449  0.019546     0.002363 -0.011187   
+Potability      -0.003556 -0.013837  0.033743     0.023779 -0.023577   
+
+                 Conductivity  Organic_carbon  Trihalomethanes  Turbidity  \
+ph                   0.018614        0.043503         0.003354  -0.039057   
+Hardness            -0.023915        0.003610        -0.013013  -0.014449   
+Solids               0.013831        0.010242        -0.009143   0.019546   
+Chloramines         -0.020486       -0.012653         0.017084   0.002363   
+Sulfate             -0.016121        0.030831        -0.030274  -0.011187   
+Conductivity         1.000000        0.020966         0.001285   0.005798   
+Organic_carbon       0.020966        1.000000        -0.013274  -0.027308   
+Trihalomethanes      0.001285       -0.013274         1.000000  -0.022145   
+Turbidity            0.005798       -0.027308        -0.022145   1.000000   
+Potability          -0.008128       -0.030001         0.007130   0.001581   
+
+                 Potability  
+ph                -0.003556  
+Hardness          -0.013837  
+Solids             0.033743  
+Chloramines        0.023779  
+Sulfate           -0.023577  
+Conductivity      -0.008128  
+Organic_carbon    -0.030001  
+Trihalomethanes    0.007130  
+Turbidity          0.001581  
+Potability         1.000000  
+```
+
 ### Preparing our Data
 
 Let's check for missing data. 

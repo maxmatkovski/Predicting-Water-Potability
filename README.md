@@ -77,7 +77,9 @@ There are several ways to deal with class imbalance. Below are four common metho
 
 
 
-#### Creating a balanced data set
+
+
+### Creating a balanced data set
 
 ```
 # create a balanced data set 
@@ -109,7 +111,7 @@ balanced_df = balanced_df.sample(frac=1, random_state=42).reset_index(drop=True)
 
 Our dataset is now balanced with a 50-50 representation of each type of class. However, due to our use of undersampling our data set now is **21.97% smaller** than it used to be. This may have an affect on our model performance which we will assess later. 
 
-#### Checking for a correlation between different variables. 
+### Checking for a correlation between different variables. 
 
 ![Image](Images/pairplot.png)
 

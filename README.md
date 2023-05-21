@@ -122,7 +122,9 @@ Also we will mathematically calculate the correlations of our values.
 ```
 correlation_matrix = df.corr()
 print(correlation_matrix)
+```
 
+```
 
                        ph  Hardness    Solids  Chloramines   Sulfate  \
 ph               1.000000  0.082096 -0.089288    -0.034350  0.018203   
@@ -161,6 +163,8 @@ Turbidity          0.001581
 Potability         1.000000  
 ```
 
+None of our data points appear to be correlated with each other. The highest correlation we have is .082 which is the correlation between ph and Hardness. This value is so low that we will just procede. 
+
 ### Preparing our Data
 
 Let's check for missing data. 
@@ -172,9 +176,9 @@ All the variables are numerical so we don't need to convert any of the data; how
 
 ### Dealing with the missing values
  
-As we can see there are a good amount of missing values that we need to deal with. Each variable has different amounts of missing values so the values appear to be missing at random. Further, some of our variables appear to be missing signficant shares of their values (3276-2785/3276 ph) and (3276-2495/3276 Sulfate) so it isn't appropriate to simply delete the rows as we would lose a great amount of our training data. 
+As we can see there are a good amount of missing values that we need to deal with. Each variable has different amounts of missing values so the values appear to be missing at random. Further, some of our variables appear to be missing signficant shares of their values(approximately 15% of ph and Sulfate is missing), and thus, it's inappropriate to simply delete the rows as we would lose a great amount of our training data. 
 
-Based off our high amount of missing values and the randomness of the values, mean imputation, median imputation, and most frequency imputation seem most appropriate. We can use each imputation method and later assess model accuracy on each set of data. 
+Based off our **high amount of missing values** and the **apparent randomness of value which are  missing**, mean imputation, median imputation, and most frequency imputation seem most appropriate to use. We can use each imputation method and later assess model accuracy on each set of imputed data. 
 
 ```
 df_mean = df.apply(lambda x: x.fillna(x.mean()))

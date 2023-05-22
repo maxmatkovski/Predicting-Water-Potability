@@ -199,7 +199,7 @@ My guess is that the median value will be most accurate because it better accoun
 
 ![Image](Images/mode-imputation.png)
 
-In the future, we can also experiment with more advanced types of imputation methods such as **K Nearest Neighbors Imputation** or **Regression Imputation**. 
+In the future, we can also experiment with more advanced types of imputation methods such as **K Nearest Neighbors Imputation**, **Regression Imputation**, or **SMOTE** as aforementioned. 
 
 ## Implementing and Evaluating Machine Learning Models
 
@@ -216,7 +216,11 @@ Here we are splitting the data into a "training" set, data which we will train o
 
 ### Decision Tree Model Theory
 
-Decision trees can be used for both regression and classification tasks and is a form of supervised learning because it requires the data to be labeled in order to create a mode. In the case of classfication, the logical statement at each step of the decision tree is decided on which condition will maximize information gain (such as entropy or gini impurity?). This process continues recursively until all data is classified into its respective class. 
+The decision tree model can be used for **both regression and classification** tasks and is a form of supervised learning because it requires the data to be labeled in order to create the model. Unsupervised learning on the other hand works with unlabeled data and can find patterns that we had previously not seen. 
+
+In this case, we will be using the decision tree model for a classification task. The model works by creating a series of logical statements to classify data into its proper classes. The model works by optimizing the logical statements it chooses, choosing a condition at each step of the decision tree which maximizes information gain. 
+
+Information gain (such as entropy or gini impurity?). This process continues recursively until all data is classified into its respective class. 
 
 In the case of regression, we are attempting to predict a numeric value rather than classify data. Here the algorithm selects which feature will optimize variance reduction such as mean squared reduction or mean absolute error (essentially a loss function). (?) (Optimizes for loss fucntion rather than information gain?). 
 

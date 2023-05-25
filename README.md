@@ -220,6 +220,9 @@ The decision tree model can be used for **both regression and classification** t
 
 In this case, we will be using the decision tree model for a classification task. The model works by creating a series of logical statements to classify data into its proper classes. The model works by optimizing the logical statements it chooses, choosing a condition at each step of the decision tree which maximizes information gain. 
 
+![Image](Images/decision-tree-model.png)
+
+
 Information gain (such as entropy or gini impurity?). This process continues recursively until all data is classified into its respective class. 
 
 In the case of regression, we are attempting to predict a numeric value rather than classify data. Here the algorithm selects which feature will optimize variance reduction such as mean squared reduction or mean absolute error (essentially a loss function). (?) (Optimizes for loss fucntion rather than information gain?). 

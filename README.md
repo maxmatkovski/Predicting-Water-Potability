@@ -342,7 +342,7 @@ Correctly predicted 1's / Total 1's
 
 #### Decision Tree Model with Mean Imputed Values
 ```
-precision    recall  f1-score   support
+                precision    recall  f1-score   support
 
            0       0.68      0.65      0.67       603
            1       0.48      0.52      0.50       380
@@ -354,7 +354,7 @@ weighted avg       0.61      0.60      0.60       983
 
 #### Random Forest Model with Mean Imputed Values
 ```
-precision    recall  f1-score   support
+                precision    recall  f1-score   support
 
            0       0.68      0.89      0.77       603
            1       0.67      0.35      0.46       380
@@ -368,7 +368,7 @@ weighted avg       0.68      0.68      0.65       983
 #### Decision Tree Model with Median Imputed Values
 
 ```
-precision    recall  f1-score   support
+                precision    recall  f1-score   support
 
            0       0.67      0.62      0.64       603
            1       0.46      0.51      0.49       380
@@ -378,9 +378,9 @@ precision    recall  f1-score   support
 weighted avg       0.59      0.58      0.58       983
 ```
 
-#### Decision Tree Model with Median Imputed Values
+#### Random Model with Median Imputed Values
 ```
-precision    recall  f1-score   support
+                precision    recall  f1-score   support
 
            0       0.69      0.89      0.78       603
            1       0.68      0.36      0.47       380
@@ -389,6 +389,8 @@ precision    recall  f1-score   support
    macro avg       0.68      0.63      0.62       983
 weighted avg       0.68      0.69      0.66       983
 ```
+
+So far our best performing model has been the Random Forest model with the Median Imputed data performing slightly better than the mean imputed data (weighted average f-1 )
 
 
 ### Feature Importances 

@@ -245,7 +245,8 @@ In order to address the common problem of overfitting with decision trees we can
 
 A random forest model essentially works by creating a series of different decision trees and taking the majority decision of the trees. The process of implementing a random forest is as follows.
 1. Randomly select a subset of the training data (with replacement) to create a bootstrapped sample. 
-- In this case, "with replacement" refers to the fact that data can be resampled in multiple constructed decision trees. For example, if you have a sample of 200 data points and select a subset of 100 data points for each tree with replacement, each data point has a chance of being selected more than once. Further, it is possible that some data points will be selected multiple times while others not at all. The selection of this data is done completely at randomly and every data sample from the original has an equal chance of being selected for each new dataset. 
+    
+    *In this case, "with replacement" refers to the fact that data can be resampled in multiple constructed decision trees. For example, if you have a sample of 200 data points and select a subset of 100 data points for each tree with replacement, each data point has a chance of being selected more than once. Further, it is possible that some data points will be selected multiple times while others not at all. The selection of this data is done completely at randomly and every data sample from the original has an equal chance of being selected for each new dataset.*
 
 2. Randomly select a subset of features to consider at each split of the decision tree. The number of features that can be considered is a hyperparameter that we can alter. 
 
@@ -258,21 +259,14 @@ A random forest model essentially works by creating a series of different decisi
 ![Image](Images/random-forests.png)
 
 
-**Bootstrapping** is a term that typically refers refers to "pulling oneself up by the bootstraps" or use one's resources in order to achieve a goal. In statistics, the term bootstrapping is used to refer to the idea of using the data itself to estimate its properties without assuming the underlying distribution.
+**Bootstrapping** 
+This is a term that typically refers refers to "pulling oneself up by the bootstraps" or use one's resources in order to achieve a goal. In statistics, the term bootstrapping is used to refer to the idea of using the data itself to estimate its properties without assuming the underlying distribution.
 
 ![Image](Images/bootstap.png)
 
 
 **How many trees are used in a random forests?**
-- it depends and there is a point of diminishing returns in which adding new trees doesn't necessarily improve the generalization performance of the model. 
-- common practices
-    - grid search? 
-    - randomized search? 
-
-- number of trees is a hyperparameter
-
-![Image](Images/decision-tree.png)
-
+This depends on model performance. There is however a point of diminishing returns in which adding new trees doesn't necessarily improve the generalization of the model. We can evaluate the number of trees using several techniques and alter the amount as a hyperparameter.
 
 ### Decision Tree Model Implementation
 ```

@@ -312,10 +312,20 @@ precision    recall  f1-score   support
 weighted avg       0.61      0.60      0.60       983
 ```
 
-![Image](Images/classification1.png)
+#### Random Forest Model with Mean Imputed Values
+```
+precision    recall  f1-score   support
+
+           0       0.68      0.89      0.77       603
+           1       0.67      0.35      0.46       380
+
+    accuracy                           0.68       983
+   macro avg       0.68      0.62      0.62       983
+weighted avg       0.68      0.68      0.65       983
+
+```
 
 ##### Decision Tree Model with Median Imputed Values
-![Image](Images/classification2.png)
 
 ```
 precision    recall  f1-score   support
@@ -328,6 +338,20 @@ precision    recall  f1-score   support
 weighted avg       0.59      0.58      0.58       983
 ```
 
+##### Decision Tree Model with Median Imputed Values
+```
+precision    recall  f1-score   support
+
+           0       0.69      0.89      0.78       603
+           1       0.68      0.36      0.47       380
+
+    accuracy                           0.69       983
+   macro avg       0.68      0.63      0.62       983
+weighted avg       0.68      0.69      0.66       983
+```
+
+
+What model is this?
 ```
 print(confusion_matrix(y_test,predictions))
 

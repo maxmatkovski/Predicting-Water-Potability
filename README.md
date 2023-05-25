@@ -300,7 +300,52 @@ print(classification_report(y_test,predictions))
 
 **Weighted Avg** calculates the weighted average of precision, recall and F-1 considering the support (number of instances of each class).
 
-##### Decision Tree Model with Mean Imputed Values
+```
+print(confusion_matrix(y_test,predictions))
+
+[[542  61]
+ [243 137]]
+ ```
+ **Example calculating values from confusion matrix.**
+
+ 
+**Precision**
+
+Class 0: 542 / (542 + 243) = 0.69
+Actual 0's / Total Predicted 0's
+
+Class 1: 137 / (137 + 69) = 
+Actual 1's / Total Predicted 1's
+
+*precision refers to how accuraate the models predictions were*
+
+**Recall**
+
+Class 0: 542 / 603 = 0.90
+Correctly predicted 0's / Total 0's
+
+Class 1: 137/380 = 0.36
+Correctly predicted 1's / Total 1's
+
+*recall refers to what percent of the values were correctly predicted*
+
+**F-1 Score (Harmonic Mean)**
+
+ ```
+
+
+              precision    recall  f1-score   support
+
+           0       0.69      0.90      0.78       603
+           1       0.69      0.36      0.47       380
+
+    accuracy                           0.69       983
+    macro avg      0.69      0.63      0.63       983
+    weighted avg   0.69      0.69      0.66       983
+```
+
+
+#### Decision Tree Model with Mean Imputed Values
 ```
 precision    recall  f1-score   support
 
@@ -325,7 +370,7 @@ weighted avg       0.68      0.68      0.65       983
 
 ```
 
-##### Decision Tree Model with Median Imputed Values
+#### Decision Tree Model with Median Imputed Values
 
 ```
 precision    recall  f1-score   support
@@ -338,7 +383,7 @@ precision    recall  f1-score   support
 weighted avg       0.59      0.58      0.58       983
 ```
 
-##### Decision Tree Model with Median Imputed Values
+#### Decision Tree Model with Median Imputed Values
 ```
 precision    recall  f1-score   support
 
@@ -349,48 +394,6 @@ precision    recall  f1-score   support
    macro avg       0.68      0.63      0.62       983
 weighted avg       0.68      0.69      0.66       983
 ```
-
-
-What model is this?
-```
-print(confusion_matrix(y_test,predictions))
-
-[[542  61]
- [243 137]]
- ```
-
-**Precision**
-
-Class 0: 542 / (542 + 243) = 0.69
-Actual 0's / Total Predicted 0's
-
-Class 1: 137 / (137 + 69) = 
-Actual 1's / Total Predicted 1's
-
-*precision refers to how accuraate the models predictions were*
-
-**Recall**
-
-Class 0: 542 / 603 = 0.90
-Correctly predicted 0's / Total 0's
-
-Class 1: 137/380 = 0.36
-Correctly predicted 1's / Total 1's
-
-*recall refers to what percent of the values were correctly predicted*
-
-**F-1 Score (Harmonic Mean)**
-
-
-
-              precision    recall  f1-score   support
-
-           0       0.69      0.90      0.78       603
-           1       0.69      0.36      0.47       380
-
-    accuracy                           0.69       983
-    macro avg      0.69      0.63      0.63       983
-    weighted avg   0.69      0.69      0.66       983
 
 
 ### Feature Importances 

@@ -300,15 +300,14 @@ print(classification_report(y_test,predictions))
 
 **Weighted Avg** calculates the weighted average of precision, recall and F-1 considering the support (number of instances of each class).
 
+ **Example calculating values from confusion matrix.**
 ```
 print(confusion_matrix(y_test,predictions))
 
 [[542  61]
  [243 137]]
  ```
- **Example calculating values from confusion matrix.**
 
- 
 **Precision**
 
 Class 0: 542 / (542 + 243) = 0.69
@@ -329,11 +328,7 @@ Correctly predicted 1's / Total 1's
 
 *recall refers to what percent of the values were correctly predicted*
 
-**F-1 Score (Harmonic Mean)**
-
  ```
-
-
               precision    recall  f1-score   support
 
            0       0.69      0.90      0.78       603

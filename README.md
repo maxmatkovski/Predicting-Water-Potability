@@ -404,7 +404,8 @@ We will now train and evaluate the Random Forest Model with Median Imputed Data,
 ```
 
 **Classification Report**
-'''
+
+```
 precision    recall  f1-score   support
 
            0       0.64      0.62      0.63       392
@@ -414,9 +415,9 @@ precision    recall  f1-score   support
    macro avg       0.63      0.63      0.63       767
 weighted avg       0.63      0.63      0.63       767
 
-'''
+```
 
-As we can see when we use the balanced data set, our recall for class 1 significantly improves from **0.36 to 0.63**. However, our overall model performance measured by our weighted avg f1-score slightly worsens from **0.66 to 0.63**. 
+As we can see when we use the balanced data set, our recall for class 1 significantly improves from **0.36 to 0.63**. However, our overall model performance measured by our **weighted avg f1-score slightly worsens from 0.66 to 0.63**. 
 
 ### Feature Importances 
 

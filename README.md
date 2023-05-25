@@ -314,17 +314,17 @@ Class 0: 542 / (542 + 243) = 0.69
 Actual 0's / Total Predicted 0's
 
 Class 1: 137 / (137 + 69) = 
-Actual 1's / Total Predicted 1's
+Actual 1's / Total  Predicted 1's
 
 *precision refers to how accuraate the models predictions were per class*
 
 **Recall**
 
 Class 0: 542 / 603 = 0.90
-Correctly predicted 0's / Total 0's
+Correctly predicted 0's / Actual 0's
 
 Class 1: 137/380 = 0.36
-Correctly predicted 1's / Total 1's
+Correctly predicted 1's / Actual 1's
 
 *recall refers to what percent of the values were correctly predicted*
 
@@ -378,7 +378,7 @@ weighted avg       0.68      0.68      0.65       983
 weighted avg       0.59      0.58      0.58       983
 ```
 
-#### Random Model with Median Imputed Values
+#### Random Forest Model with Median Imputed Values
 ```
                 precision    recall  f1-score   support
 
@@ -390,8 +390,33 @@ weighted avg       0.59      0.58      0.58       983
 weighted avg       0.68      0.69      0.66       983
 ```
 
-So far our best performing model has been the Random Forest model with the Median Imputed data performing slightly better than the Mean Imputed data (weighted avg f1-score: of 0.66 vs 0.65). Now we will train and evaluate the random forest model with median imputed data, but this time use the data set we created which addresses the strong class imbalance (undersampled data set). 
+#### Random Model with Median Imputed Values (Balanced Dataset)
+So far our best performing model has been the **Random Forest with Median Impuation (weighted avg f1-score: 0.66)**  performing slightly better than **Random Forest with Mean Imputation (weighted avg f1-score: 0.65)**.
 
+As we can see in the classification report that the model performs slightly worse in precision for class 1 (the underrepresented class) and significantly worse in recall. 
+
+We will now train and evaluate the Random Forest Model with Median Imputed Data, but this time use the data set we created which addresses undersamples class 0 to address the strong class imbalance. 
+
+**Confusion Matrix**
+```
+[[243 149]
+ [138 237]]
+```
+
+**Classification Report**
+'''
+precision    recall  f1-score   support
+
+           0       0.64      0.62      0.63       392
+           1       0.61      0.63      0.62       375
+
+    accuracy                           0.63       767
+   macro avg       0.63      0.63      0.63       767
+weighted avg       0.63      0.63      0.63       767
+
+'''
+
+As we can see when we use the balanced data set, our recall for class 1 significantly improves from **0.36 to 0.63**. However, our overall model performance measured by our weighted avg f1-score slightly worsens from **0.66 to 0.63**. 
 
 ### Feature Importances 
 
@@ -399,7 +424,6 @@ So far our best performing model has been the Random Forest model with the Media
 
 
 
-### Data: Source? 
 
 ### Works Cited
 1. https://ourworldindata.org/water-access

@@ -1,4 +1,4 @@
-# Investigation of Water Potability
+# Predicting Water Potability Using Machine Learning
 
 ## Project Motivation
 
@@ -424,7 +424,7 @@ As we can see when we use the balanced data set, our recall for class 1 signific
 
 Feature importances signify which features are most influential in a particular machine learning model. All feature importances sum to 0, and the higher the value, the more influential the feature is in the model. In certain cases, where our model contains features with low feature importance, we can consider removing them in order to achieve a simpler and more efficient model. 
 
-In this case, all of our features appear to be very similar. This 
+In this case, all of our features appear to be very similar in importance. This can potentially be caused by the ensemble method, random forests make use of. When generating so many decision trees and averaging out their results, feature importance may become averaged out, with all features being represented as equally important. 
 
 
 ### Works Cited

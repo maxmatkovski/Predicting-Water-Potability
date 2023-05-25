@@ -285,32 +285,29 @@ print(classification_report(y_test,predictions))
 
 #### Interpreting Classification Reports
 
-##### df_mean
+##### Decision Tree Model with Mean Imputed Values
 ![Image](Images/classification1.png)
 
-##### df_median
+##### Decision Tree Model with Median Imputed Values
 ![Image](Images/classification2.png)
 
 
 **Classification report values**
 
-Precision: Precision measures what percent of predicted true values of a particular class are indeed true. In this case for class 0, the precision is 0.68 which means that 68% of the instances the model predicted to be as class 0 (water not potable) are indeed class class 0 instances. 
-
-Recall: (True Postitive Rate) 
-
+**Precision** measures what percent of predicted true values of a particular class are indeed true. In this case for class 0, the precision is 0.68 which means that 68% of the instances the model predicted to be as class 0 (water not potable) are indeed class class 0 instances. 
 
 
 **Recall** also known as the sensitivity or true positive rate, calculates the percentage of true positive instances which are correctly by the model. In the case of Random Forest (median imputation), the model correctly identified 89% of actual instances belonging to class 0, while only recalling 34% of of actual instances of class 1. *(Why such a large disparity)*
 
-**F-1 Score:** F-1-score is the harmonic mean of precision and recall metrics. Harmonic means are useful for addressing imbalance and give more value to smaller values, thus reducing the impact of outliers. In this case we want to balance precision and recall, and thus, use the harmonic mean. 
+**F-1 Score:** F-1-score is the harmonic mean of precision and recall metrics and can be used as a metric representing both values. *Harmonic means are useful for addressing imbalance and give more value to smaller values, thus reducing the impact of outliers. In this case we want to balance precision and recall, and thus, use the harmonic mean.* 
 
 **Support:** Support metric is simply the number of instances we have in our data set of each class. 
 
 **Accuracy:** Accuracy calculates the model's predictions regardless of the class. Thus, an accuracy value of 0.68 means that 68% of all instances of all instances were correctly classified. 
 
-**Macro Avg:** Macro Avg calculates the average precision, recall and F-1 score across classes. 
+**Macro Avg** calculates the average precision, recall and F-1 score across classes. 
 
-**Weighted Avg:** Weighted Avg calculates the weighted average of precision, recall and F-1 considering the support (number of instances of each class). 
+**Weighted Avg** calculates the weighted average of precision, recall and F-1 considering the support (number of instances of each class). 
 
 ```
 print(confusion_matrix(y_test,predictions))
@@ -326,6 +323,7 @@ Actual 0's / Total Predicted 0's
 
 Class 1: 137 / (137 + 69) = 
 Actual 1's / Total Predicted 1's
+
 *precision refers to how accuraate the models predictions were*
 
 **Recall**
@@ -335,10 +333,10 @@ Correctly predicted 0's / Total 0's
 
 Class 1: 137/380 = 0.36
 Correctly predicted 1's / Total 1's
+
 *recall refers to what percent of the values were correctly predicted*
 
 **F-1 Score (Harmonic Mean)**
-?
 
 
 

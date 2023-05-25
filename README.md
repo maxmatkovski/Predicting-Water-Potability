@@ -259,13 +259,13 @@ A random forest model essentially works by creating a series of different decisi
 ![Image](Images/random-forests.png)
 
 
-**Bootstrapping** 
+###### Bootstrapping
 This is a term that typically refers refers to "pulling oneself up by the bootstraps" or use one's resources in order to achieve a goal. In statistics, the term bootstrapping is used to refer to the idea of using the data itself to estimate its properties without assuming the underlying distribution.
 
 ![Image](Images/bootstap.png)
 
 
-**How many trees are used in a random forests?**
+###### How many trees are used in a random forests?
 This depends on model performance. There is however a point of diminishing returns in which adding new trees doesn't necessarily improve the generalization of the model. We can evaluate the number of trees using several techniques and alter the amount as a hyperparameter.
 
 ### Decision Tree Model Implementation

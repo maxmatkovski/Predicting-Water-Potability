@@ -390,7 +390,7 @@ weighted avg       0.59      0.58      0.58       983
 weighted avg       0.68      0.69      0.66       983
 ```
 
-#### Random Model with Median Imputed Values (Balanced Dataset)
+#### Random Forest Model with Median Imputed Values (Balanced Dataset)
 So far our best performing model has been the **Random Forest with Median Impuation (weighted avg f1-score: 0.66)**  performing slightly better than **Random Forest with Mean Imputation (weighted avg f1-score: 0.65)**.
 
 As we can see in the classification report that the model performs slightly worse in precision for class 1 (the underrepresented class) and significantly worse in recall. 
@@ -406,7 +406,7 @@ We will now train and evaluate the Random Forest Model with Median Imputed Data,
 **Classification Report**
 
 ```
-precision    recall  f1-score   support
+                precision    recall  f1-score   support
 
            0       0.64      0.62      0.63       392
            1       0.61      0.63      0.62       375

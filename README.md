@@ -316,7 +316,7 @@ Actual 0's / Total Predicted 0's
 Class 1: 137 / (137 + 69) = 
 Actual 1's / Total Predicted 1's
 
-*precision refers to how accuraate the models predictions were*
+*precision refers to how accuraate the models predictions were per class*
 
 **Recall**
 
@@ -390,7 +390,7 @@ weighted avg       0.59      0.58      0.58       983
 weighted avg       0.68      0.69      0.66       983
 ```
 
-So far our best performing model has been the Random Forest model with the Median Imputed data performing slightly better than the mean imputed data (weighted average f-1 )
+So far our best performing model has been the Random Forest model with the Median Imputed data performing slightly better than the Mean Imputed data (weighted avg f1-score: of 0.66 vs 0.65). Now we will train and evaluate the random forest model with median imputed data, but this time use the data set we created which addresses the strong class imbalance (undersampled data set). 
 
 
 ### Feature Importances 

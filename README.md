@@ -223,17 +223,21 @@ In this case, we will be using the decision tree model for a classification task
 ![Image](Images/decision-tree-model.png)
 
 
-Information gain (such as entropy or gini impurity?). This process continues recursively until all data is classified into its respective class. 
-
-In the case of regression, we are attempting to predict a numeric value rather than classify data. Here the algorithm selects which feature will optimize variance reduction such as mean squared reduction or mean absolute error (essentially a loss function). (?) (Optimizes for loss fucntion rather than information gain?). 
+In the case of regression, we are attempting to predict a numeric value rather than classify data. In this case, the algorithm selects which feature will optimize variance reduction such as mean squared reduction or mean absolute error rather than information gain. 
 
 **Problems with decision trees**
 Decision trees are prone to overfitting. Overfitting is when a machine learning model learns from a set of training data "too well" and consequently is unable to replicate well on unseen data. Essentially, the model becomes so accurate on the training data that it is highly biased when assessing new data. Decision trees are especially prone to overfitting when there are many features in our data or if the tree grows too deep. The deeper the tree grows, the more likely overfitting will occur. Other problems that can lead to overfitting in decision trees arise from the size and distribution of our data. Overfitting can occur when our data is too small or when it's unbalanced. 
 
-Techniques to avoid overfitting 
-- pruning
-- maximum tree depth
-- random forests
+**Example of overfitting in classfication.**
+![Image](Images/overfit-classify.png)
+
+### Techniques to avoid overfitting 
+**Pruning** involves simplifying decision trees which have grown too complex and have lead to overfitting. 
+
+1. **Pre-pruning** occurs before trees have fully developed and can involve setting a maximum tree depth, setting a minimum number of classified samples, setting a minimum impurity improvement, or setting a maximum number of leaf nodes.
+2. **Post-pruning** is another option which simiplifies decision trees after they have fully grown. This technique can involve removing branches if their removal leads to improved classification rate or by iteratively removing branches which reduce model complexity. 
+
+In addition to these techniques we can also use Random Forests to avoid overfitting.
 
 **Random Forest Model**
 In order to address the common problem of overfitting that is common with decision trees we can use a machine learning method known as random forests. 

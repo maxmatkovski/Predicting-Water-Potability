@@ -285,15 +285,6 @@ print(classification_report(y_test,predictions))
 
 #### Interpreting Classification Reports
 
-##### Decision Tree Model with Mean Imputed Values
-![Image](Images/classification1.png)
-
-##### Decision Tree Model with Median Imputed Values
-![Image](Images/classification2.png)
-
-
-**Classification report values**
-
 **Precision** measures what percent of predicted true values of a particular class are indeed true. In this case for class 0, the precision is 0.68 which means that 68% of the instances the model predicted to be as class 0 (water not potable) are indeed class class 0 instances. 
 
 
@@ -307,7 +298,35 @@ print(classification_report(y_test,predictions))
 
 **Macro Avg** calculates the average precision, recall and F-1 score across classes. 
 
-**Weighted Avg** calculates the weighted average of precision, recall and F-1 considering the support (number of instances of each class). 
+**Weighted Avg** calculates the weighted average of precision, recall and F-1 considering the support (number of instances of each class).
+
+##### Decision Tree Model with Mean Imputed Values
+```
+precision    recall  f1-score   support
+
+           0       0.68      0.65      0.67       603
+           1       0.48      0.52      0.50       380
+
+    accuracy                           0.60       983
+   macro avg       0.58      0.58      0.58       983
+weighted avg       0.61      0.60      0.60       983
+```
+
+![Image](Images/classification1.png)
+
+##### Decision Tree Model with Median Imputed Values
+![Image](Images/classification2.png)
+
+```
+precision    recall  f1-score   support
+
+           0       0.67      0.62      0.64       603
+           1       0.46      0.51      0.49       380
+
+    accuracy                           0.58       983
+   macro avg       0.57      0.57      0.57       983
+weighted avg       0.59      0.58      0.58       983
+```
 
 ```
 print(confusion_matrix(y_test,predictions))

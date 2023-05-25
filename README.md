@@ -414,14 +414,14 @@ precision    recall  f1-score   support
     accuracy                           0.63       767
    macro avg       0.63      0.63      0.63       767
 weighted avg       0.63      0.63      0.63       767
-
 ```
 
-As we can see when we use the balanced data set, our recall for class 1 significantly improves from **0.36 to 0.63**. However, our overall model performance measured by our **weighted avg f1-score slightly worsens from 0.66 to 0.63**. 
+As we can see when we use the balanced data set, our recall for class 1 significantly improves from **0.36 to 0.63**. However, our overall model performance measured by our **weighted avg f1-score slightly worsens from 0.66 to 0.63**. Overall, while our weighted avg f1-score slightly worsens, the drastic improvement in recall for class 1 makes this a more consistent and reliable model. 
 
 ### Feature Importances 
 
 ![Image](Images/feature-importances.png)
+
 
 
 
